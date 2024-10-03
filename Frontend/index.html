@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Management</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center my-4">Employee Management System</h1>
+      <div class="card mb-4">
+        <div class="card-body">
+          <form id="employeeForm">
+            <input type="hidden" id="emp_id" name="emp_id" />
+            <div class="form-group">
+              <label for="emp_name">Name:</label>
+              <input
+                type="text"
+                id="emp_name"
+                name="emp_name"
+                class="form-control"
+                required
+                placeholder="Only Char Values are allowed"
+              />
+            </div>
+            <div class="form-group">
+              <label for="emp_dep">Department:</label>
+              <input
+                type="text"
+                id="emp_dep"
+                name="emp_dep"
+                class="form-control"
+                required
+                placeholder="Only Char Values are allowed"
+              />
+            </div>
+            <div class="form-group">
+              <label for="emp_salary">Salary:</label>
+              <input
+                type="number"
+                id="emp_salary"
+                name="emp_salary"
+                class="form-control"
+                required
+                placeholder="Only Num Values are allowed"
+              />
+            </div>
+            <div class="form-group">
+              <label for="emp_contact">Contact:</label>
+              <input
+                type="text"
+                id="emp_contact"
+                name="emp_contact"
+                class="form-control"
+                required
+                pattern="[0-9]{10}"
+                placeholder="Numbers Contains 10 Digits"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+      <h2 class="text-center my-4">Employee List</h2>
+      <div class="table-responsive">
+        <table id="employeeTable" class="table table-bordered table-hover">
+          <thead class="thead-dark">
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Department</th>
+              <th>Salary</th>
+              <th>Contact</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
