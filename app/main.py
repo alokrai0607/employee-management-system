@@ -14,12 +14,12 @@ app.include_router(employee.router)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allow all origins (for testing purposes)
+    allow_origins=["*"], 
     allow_credentials=True,
-    allow_methods=["*"],  # Allow all HTTP methods (GET, POST, PUT, DELETE, etc.)
-    allow_headers=["*"],  # Allow all headers
+    allow_methods=["*"],  
+    allow_headers=["*"], 
 )
 
-
+#.\venv\Scripts\Activate.ps1 
 #python -m uvicorn app.main:app --reload
 # http://127.0.0.1:8000/docs
