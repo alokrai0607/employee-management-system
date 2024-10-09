@@ -2,8 +2,12 @@ from sqlalchemy.orm import Session
 from app.repository import employee as employee_repo
 from app.schemas.employee import EmployeeCreate, EmployeeUpdate, EmployeePartialUpdate
 
+
 def get_all_employees(db: Session):
     return employee_repo.get_employees(db)
+
+def get_degrees_of_employee(db: Session, emp_id: int):
+    return employee_repo.get_degrees_by_employee_id(db, emp_id)
 
 def get_employee_by_id(db: Session, emp_id: int):
     return employee_repo.get_employee(db, emp_id)

@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from typing import List
 
 from app.database import SessionLocal
-from app.schemas.employee import EmployeeCreate, EmployeeUpdate, EmployeeInDB, EmployeePartialUpdate
+from app.schemas.employee import EmployeeCreate, EmployeeUpdate, EmployeeInDB, EmployeePartialUpdate, DegreeCreate, DegreeInDB
 from app.services import employee as employee_service
 
 router = APIRouter()
@@ -22,6 +22,11 @@ def create_employee(employee: EmployeeCreate, db: Session = Depends(get_db)):
 @router.get("/employees", response_model=List[EmployeeInDB])
 def get_employees(db: Session = Depends(get_db)):
     return employee_service.get_all_employees(db)
+
+# Get degrees of a specific employee
+@router.get("/employees/{emp_id}/degrees", response_model=List[DegreeInDB])
+def get_degrees(emp_id: int, db: Session = Depends(get_db)):
+    return employee_service.get_degrees_of_employee(db, emp_id)
 
 @router.get("/employees/{emp_id}", response_model=EmployeeInDB)
 def get_employee(emp_id: int, db: Session = Depends(get_db)):
