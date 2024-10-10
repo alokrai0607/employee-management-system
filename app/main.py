@@ -20,6 +20,10 @@ app.add_middleware(
     allow_headers=["*"], 
 )
 
-#.\venv\Scripts\Activate.ps1 
-#python -m uvicorn app.main:app --reload
-# http://127.0.0.1:8000/docs
+
+
+#                   .\venv\Scripts\Activate.ps1 
+
+#                   python -m uvicorn app.main:app --reload
+
+#                   http://127.0.0.1:8000/docs

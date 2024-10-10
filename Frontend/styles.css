@@ -212,3 +212,123 @@ button:active {
   font-size: 16px;
   margin: 5px 0;
 }
+
+/* Base styles remain the same */
+
+/* Small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
+    margin: 10px auto;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  form,
+  #employees,
+  .modal-content {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  label,
+  input[type="text"],
+  input[type="number"],
+  button {
+    font-size: 14px;
+  }
+
+  .degree-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .degree-item {
+    padding: 10px;
+  }
+}
+
+/* Medium devices (tablets, 768px and down) */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    margin: 15px auto;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  input[type="text"],
+  input[type="number"] {
+    font-size: 15px;
+  }
+
+  .degree-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .degree-item {
+    padding: 12px;
+  }
+}
+
+/* Large devices (desktops, 1024px and up) */
+@media (min-width: 1024px) {
+  .container {
+    width: 75%;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  .degree-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .degree-item {
+    padding: 15px;
+  }
+}
+
+/* Extra large devices (large desktops, 1440px and up) */
+@media (min-width: 1440px) {
+  .container {
+    width: 70%;
+  }
+
+  h1 {
+    font-size: 44px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .degree-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+  }
+
+  .degree-item {
+    padding: 20px;
+  }
+}

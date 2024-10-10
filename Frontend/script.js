@@ -26,7 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   showDegreeBtn.addEventListener("click", () => {
-    degreesContainer.style.display === "none" ? "block" : "none";
+    degreesContainer.style.display =
+      degreesContainer.style.display === "none" ? "block" : "none";
     showDegreeBtn.style.display = "none";
   });
 
